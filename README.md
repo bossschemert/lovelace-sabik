@@ -11,7 +11,11 @@ resources:
   - type: module
     url: /local/lovelace-sabik/sabik-card.js
 ```
-* Add a card with `type: 'custom:sabik-card'` and `entity: 'climate.put-your-sabik-name-here'` to your UI.
+* Add a card with `type: 'custom:sabik-card'` and `entity: 'climate.put-your-sabik-name-here'` to your UI:
+```
+type: 'custom:sabik-card'
+entity: 'climate.put-your-sabik-name-here'
+```
 * Restart home assistant
 * ???
 * Profit!
