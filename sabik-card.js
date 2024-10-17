@@ -22,18 +22,18 @@ class SabikCard extends LitElement {
               <div class="flex-col-out">
                   <div>${this.hass.states['sensor.sabik_outdoor_air_temperature'].state}°C <ha-icon icon="mdi:water-percent"></ha-icon>${this.hass.states['sensor.sabik_rh_outdoor_air'].state}%</div>
                   <div class="fan-state"><ha-icon icon="mdi:speedometer"></ha-icon> ${Math.trunc(this.hass.states['sensor.sabik_rpm_supply_motor'].state)} rpm</div>
-                  <div class="fan-state"><ha-icon icon="mdi:speedometer"></ha-icon> ${Math.trunc(this.hass.states['sensor.sabik_rpm_extract_motor'].state)} rpm</div>
                   <div>${this.hass.states['sensor.sabik_exhaust_air_temperature'].state}°C <ha-icon icon="mdi:water-percent"></ha-icon>${this.hass.states['sensor.sabik_rh_exhaust_air'].state}%</div>
+                  <div class="fan-state"><ha-icon icon="mdi:speedometer"></ha-icon> ${Math.trunc(this.hass.states['sensor.sabik_rpm_extract_motor'].state)} rpm</div>
               </div>
               <div class="flex-col-main">
                   <div>${this.hass.states['sensor.itho_wpu_current_room_temp'].state}°C</div>
-                  <div><ha-icon class="spin" icon="mdi:${({'auto': 'fan', 'off': 'fan-off', low: 'fan-speed-1', medium: 'fan-speed-2', high: 'fan-speed-3'}[this.hass.states[this.config.entity].attributes.fan_mode])}"></ha-icon></div>
+                  <div><ha-icon class="spin" icon="mdi:${({'3': 'fan', '4': 'fan-off', '0': 'fan-speed-1', '1': 'fan-speed-2', '2': 'fan-speed-3'}[this.hass.states['sensor.sabik_selected_air_volume'].state])}"></ha-icon></div>
               </div>
               <div class="flex-col-in">
                   <div>${this.hass.states['sensor.sabik_extract_air_temperature'].state}°C <ha-icon icon="mdi:water-percent"></ha-icon>${this.hass.states['sensor.sabik_rh_extract_air'].state}%</div>
                   <div class="fan-state"><ha-icon icon="mdi:fan"></ha-icon> ${Math.trunc(this.hass.states['sensor.sabik_voltage_extract_motor'].state)}%</div>
-                  <div class="fan-state"><ha-icon icon="mdi:fan"></ha-icon> ${Math.trunc(this.hass.states['sensor.sabik_voltage_supply_motor'].state)}%</div>
                   <div>${this.hass.states['sensor.sabik_supply_air_temperature'].state}°C <ha-icon icon="mdi:water-percent"></ha-icon>${this.hass.states['sensor.sabik_rh_supply_air'].state}%</div>
+                  <div class="fan-state"><ha-icon icon="mdi:fan"></ha-icon> ${Math.trunc(this.hass.states['sensor.sabik_voltage_supply_motor'].state)}%</div>
               </div>
           </div>
       </div>
