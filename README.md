@@ -29,8 +29,7 @@ resources:
 1. Go to your dashboard
 2. Click the 3 dots menu in the top right and choose 'Edit Dashboard'
 3. Click the '+' button to add a new card
-4. Scroll down to 'Custom: Sabik Card' or search for it
-5. If you don't see it, try adding it manually in YAML mode with:
+4. Scroll down to manually add a card in YAML mode:
 ```yaml
 type: 'custom:sabik-card'
 ```
