@@ -4,20 +4,36 @@
 
 # Installation
 
-* Clone this repo into your `www` folder inside your configuration. So it will be: `config_folder/www/lovelace-sabik`.
-* Edit your lovelace-ui.yaml or use the flat configuration mode in lovelace and add to the top:
+There are two ways to install this card:
+
+## HACS Installation (Recommended)
+1. Make sure you have [HACS](https://hacs.xyz/) installed in your Home Assistant instance
+2. Go to HACS → Frontend
+3. Click the "+ Explore & Download Repositories" button
+4. Search for "Sabik Card"
+5. Click Download
+6. Restart Home Assistant
+
+## Manual Installation
+1. Download the `sabik-card.js` and `sabik_heat.png` file from this repository
+2. Copy it to your `config/www/lovelace-sabik/` folder
+3. Add the following to your Lovelace resources:
 ```yaml
 resources:
   - type: module
     url: /local/lovelace-sabik/sabik-card.js
 ```
-* Add a card with `type: 'custom:sabik-card'` to your UI:
+4. Restart Home Assistant
+
+## Adding the Card to Your Dashboard
+1. Go to your dashboard
+2. Click the 3 dots menu in the top right and choose 'Edit Dashboard'
+3. Click the '+' button to add a new card
+4. Scroll down to 'Custom: Sabik Card' or search for it
+5. If you don't see it, try adding it manually in YAML mode with:
 ```yaml
 type: 'custom:sabik-card'
 ```
-* Restart home assistant
-* ???
-* Profit!
 
 ## Required Entities
 

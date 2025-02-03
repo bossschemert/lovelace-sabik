@@ -1,5 +1,5 @@
 {
-  "name": "Sabik ventilation lovelace component",
+  "name": "Sabik Card",
   "content_in_root": true,
   "render_readme": true,
   "filename": "sabik-card.js"
