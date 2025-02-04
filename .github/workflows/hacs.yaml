@@ -32,4 +32,5 @@ jobs:
         with:
           files: |
             sabik-card.js
+            sabik_heat.png
             LICENSE
