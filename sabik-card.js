@@ -186,10 +186,10 @@ class SabikCard extends LitElement {
     const extractTemp = parseFloat(this.hass.states['sensor.sabik_extract_air_temperature'].state);
     const tempDiff = extractTemp - outdoorTemp;
 
-    // These could come from configuration entities if exposed
-    const minOutdoorTemp = 13;
-    const minExtractTemp = 23;
-    const minTempDiff = 3;
+    // Get the actual limits from the Sabik unit with correct sensor names
+    const minOutdoorTemp = parseFloat(this.hass.states['sensor.sabik_min_outdoor_temperature_for_bypass'].state);
+    const minExtractTemp = parseFloat(this.hass.states['sensor.sabik_min_extract_temperature_for_bypass'].state);
+    const minTempDiff = parseFloat(this.hass.states['sensor.sabik_min_temperature_difference_for_bypass'].state);
 
     const conditions = [];
     if (outdoorTemp < minOutdoorTemp) {
@@ -233,7 +233,7 @@ class SabikCard extends LitElement {
   getSummerModeTmpl(){
     const currentState = this.hass.states['binary_sensor.sabik_summer_mode'].state;
     const outdoorTemp = parseFloat(this.hass.states['sensor.sabik_outdoor_air_temperature'].state);
-    const minOutdoorTemp = 13; // Could come from configuration
+    const minOutdoorTemp = parseFloat(this.hass.states['sensor.sabik_min_outdoor_temperature_for_bypass'].state);
 
     const canEnable = outdoorTemp >= minOutdoorTemp;
     const tooltip = canEnable
