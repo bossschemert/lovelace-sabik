@@ -1,6 +1,12 @@
 {
   "name": "Sabik Card",
-  "content_in_root": true,
-  "render_readme": true,
-  "filename": "sabik-card.js"
+  "description": "Lovelace card for Sabik, a simple and elegant way to display your data.",
+  "filename": "sabik-card.js",
+  "type": "lovelace",
+  "resources": [
+    {
+      "url": "/local/lovelace-sabik/sabik-card.js",
+      "type": "module"
+    }
+  ],  
 }
