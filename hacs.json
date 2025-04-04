@@ -4,5 +4,5 @@
   "filename": "www/sabik-card.js",
   "render_readme": true,
   "type": "lovelace",
-  "content_in_root": true
+  "content_in_root": false
 }
